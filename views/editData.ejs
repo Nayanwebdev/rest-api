@@ -1,0 +1,40 @@
+<%- include("header") -%>
+
+<h2>Update User Data</h2>
+
+<form action="/editUserData" method="post">
+  <input type="hidden" name="user_id" value="<%= singleUser.id %>" />
+
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped mt-5">
+        <tr class="winner__table">
+          <th>UserName</th>
+          <td>
+            <input type="text" name="userName" class="form-control" value="<%= singleUser.userName %>" />
+          </td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>
+            <input type="email" name="email" class="form-control" value="<%= singleUser.email %>" />
+          </td>
+        </tr>
+        <tr>
+          <th>userInfo</th>
+          <td>
+            <input type="text" class="form-control" name="userInfo" value="<%= singleUser.userInfo %>" />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit" name="submit" class="submit-button">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</form>
+
+<%- include("footer") -%>
